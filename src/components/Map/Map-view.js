@@ -5,7 +5,6 @@ import HealthPointsBar from "../HealthPointsBar";
 
 const MapView = props => {
   const { markers, hp, firePutOut, fireExpired } = props;
-  console.log('props', props);
   const createMapOptions = function(maps) {
     return {
       panControl: false,

@@ -31,12 +31,13 @@ const MapContainer = () => {
     let aux = markers.splice(i, 1);
     setState({ ...state, markers });
     if (aux.length > 0) {
-      setState({ ...state, putOut: putOut.push(aux[0]) });
+      putOut.push(aux[0]);
+      setState({ ...state, putOut});
     }
   };
 
   const fireExpired = id => {
-    let { markers, missed, hp } = state;
+    let { markers, markers_base, missed, hp } = state;
     let i = markers.findIndex(m => m.id === id);
     let aux = markers.splice(i, 1);
     if (aux.length > 0) {
@@ -48,7 +49,7 @@ const MapContainer = () => {
       customClearInterval();
       setState({ ...state, customClearInterval: () => {}});
       gameOver();
-    } else if (markers.length <= 0) {
+    } else if (markers.length <= 0 && markers_base.length <= 0) {
       customClearInterval();
       setState({ ...state, customClearInterval: () => {} });
       youWin();
@@ -57,7 +58,6 @@ const MapContainer = () => {
 
   const fetchFire = () => {
     const { markers, markers_base } = state;
-    console.log(markers.length, markers_base.length);
     if (markers_base.length === 0) {
       return;
     }
