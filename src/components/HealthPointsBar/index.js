@@ -3,6 +3,7 @@ import React from 'react';
 
 
 export default (props) => {
+    const bgcolor = props.value <= 30 ? 'red' : props.value <= 70 ? 'orange' : 'green';
     const styles = {
         boxSizing: 'border-box',
         fontSize: '1.5em',
@@ -13,7 +14,8 @@ export default (props) => {
         width: 'calc(100% - 10px)',
         position: 'absolute',
         bottom: '5px',
-        backgroundColor: 'black'
+        //backgroundColor: 'black'
+        backgroundImage: `linear-gradient(to right, ${bgcolor} 0%, ${bgcolor} ${props.value}%, black ${props.value}%, black 100%)`
     }
 
     const innerStyles = {
@@ -31,9 +33,6 @@ export default (props) => {
     }
 
     return (
-        <div style={styles}>
-            <div style={innerStyles}></div>
-            {/* <div style={textStyles}>{props.value}</div> */}
-        </div>
+        <div style={styles}>{props.value}</div>
     );
 }
