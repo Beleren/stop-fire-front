@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import Marker from '../Marker'
-import HealthPointsBar from '../HealthPointsBar'
-import incendios from '../../services/incendios'
+import Marker from '../Marker';
+import HealthPointsBar from '../HealthPointsBar';
+import incendios from '../../services/incendios';
+import dificuldades from '../../services/dificuldades';
 
 class Map extends Component {
 
