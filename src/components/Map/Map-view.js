@@ -4,7 +4,7 @@ import Marker from "../Marker";
 import HealthPointsBar from "../HealthPointsBar";
 
 const MapView = props => {
-  const { markers, hp, firePutOut, fireExpired } = props;
+  const { markers, hp, firePutOut, legalPutOut, fireExpired } = props;
   const createMapOptions = function(maps) {
     return {
       panControl: false,
@@ -101,7 +101,9 @@ const MapView = props => {
             id={mrk.id}
             lat={mrk.lat}
             lng={mrk.lng}
+            legal={mrk.legal}
             firePutOut={firePutOut}
+            legalPutOut={legalPutOut}
             fireExpired={fireExpired}
             timeout={5000}
           />
