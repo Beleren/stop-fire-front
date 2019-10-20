@@ -19,7 +19,86 @@ class Map extends Component {
   }
 
   render() {
-    const {markerClick} = this.props;
+
+    const createMapOptions = function (maps) {
+      return {
+        panControl: false,
+        mapTypeControl: false,
+        scrollwheel: false,
+        scaleControl: false,
+        zoomControl: false,
+        streetViewControl: false,
+        fullscreenControl: false,
+        styles: [
+          {
+            "elementType": "labels",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.neighborhood",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          }
+        ]
+      }
+    }
 
     return (
       // Important! Always set the container height explicitly
@@ -28,6 +107,7 @@ class Map extends Component {
           bootstrapURLKeys={{ key: 'AIzaSyCbgyRHLgWnrsRCKSuXrKWwwzJFY_OeF8M' }}
           defaultCenter={{ lat: 0, lng: 0 }}
           defaultZoom={1}
+          options={createMapOptions}
         >
 
           {
