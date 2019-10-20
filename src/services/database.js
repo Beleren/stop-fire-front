@@ -1,3 +1,7 @@
+/*
+https://eonet.sci.gsfc.nasa.gov/api/v2.1/events
+*/
+
 export default {
   title: "EONET Events",
   description: "Natural events from EONET.",
