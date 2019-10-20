@@ -120,8 +120,6 @@ const MapContainer = () => {
 
   const { markers, hp, level } = state;
   return (
-    // <React.Fragment>
-    //   <div>{level}</div>
     <MapView
       markers={markers}
       hp={hp}
@@ -129,7 +127,6 @@ const MapContainer = () => {
       legalPutOut={legalPutOut}
       fireExpired={fireExpired}
     />
-    {/* </React.Fragment> */}
   );
 };
 
