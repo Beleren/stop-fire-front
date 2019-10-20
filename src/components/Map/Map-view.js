@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from '../Marker'
+import HealthPointsBar from '../HealthPointsBar'
 
 class Map extends Component {
 
@@ -117,6 +118,7 @@ class Map extends Component {
           }
           
         </GoogleMapReact>
+        <HealthPointsBar value={90}/>
       </div>
     );
   }
