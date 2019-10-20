@@ -79,7 +79,7 @@ const MapContainer = () => {
         return;
       }
     }    
-    checkNewLevel();
+    // checkNewLevel();
   };
 
   const legalPutOut = id => {
@@ -107,9 +107,9 @@ const MapContainer = () => {
       return;
     }
     console.log(level);
-    if (playsOpen === dificuldades[level].plays) {
-      return;
-    }
+    // if (playsOpen === dificuldades[level].plays) {
+    //   return;
+    // }
     let e = markers_base.splice(Math.floor(Math.random()*markers_base.length), 1);
     e = e[0];
     // let e = markers_base.shift();
