@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./scenes/Home";
+import Cadastro from './scenes/Cadastro';
+import EndScreen from './scenes/EndScreen';
 import Map from "./components/Map";
 
 function App() {
@@ -13,6 +15,12 @@ function App() {
           </Route>
           <Route path='/game'>
             <Map />
+          </Route>
+          <Route path='/form'>
+            <Cadastro />
+          </Route>
+          <Route path='/thankyou'>
+            <EndScreen />
           </Route>
         </Switch>
       </Router>

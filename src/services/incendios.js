@@ -8,7 +8,8 @@ let incendios = eventos.events.reduce((arr, event) => {
             id: event.id,
             date: d,
             lng: g.coordinates[0],
-            lat: g.coordinates[1]
+            lat: g.coordinates[1],
+            legal: (Math.random() >= .9)
         });
     }
     return arr;
