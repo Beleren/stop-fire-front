@@ -1,1 +1,1 @@
-export {default} from './Map-view';
+export {default} from './map-container';
