@@ -1,0 +1,15 @@
+.home {
+  background: url("/images/Slide1.PNG") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  margin-right: 0 !important;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-flow: column;
+}

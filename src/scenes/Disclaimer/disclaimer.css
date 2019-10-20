@@ -1,0 +1,12 @@
+.disclaimer {
+  background: url("/images/Slide2.PNG") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.disclaimer-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}

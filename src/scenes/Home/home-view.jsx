@@ -1,17 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
-import MenuContainer from "../../components/MenuContainer";
+import "./home.css";
 
 const Home = () => {
   return (
-    <MenuContainer>
-      <section style={{ textAlign: "center" }}>
-        <h1 style={{ marginBottom: "2em" }}>Stop Fire</h1>
+    <div className='home'>
+      <section className="home-container container">
+        <h1 style={{ marginBottom: "2em" }}>STOP FIRE</h1>
         <div>
-          <Button variant="contained" href="/game">START</Button>
+          <Link to='/disclaimer' className='btn'>START</Link>
         </div>
       </section>
-    </MenuContainer>
+    </div>
   );
 };
 
