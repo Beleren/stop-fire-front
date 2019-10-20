@@ -1,6 +1,7 @@
 .disclaimer {
   background: url("/images/Slide2.PNG") 50% 50% no-repeat;
   background-size: cover;
+  text-shadow: 1px 1px black;
 }
 
 .disclaimer-container {

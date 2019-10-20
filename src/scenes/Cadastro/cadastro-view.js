@@ -5,6 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import { Link } from 'react-router-dom'
 import MenuContainer from "../../components/MenuContainer";
 import Button from '@material-ui/core/Button';
+import './cadastro.css';
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -42,9 +43,11 @@ const Cadastro = () => {
     ]
 
     return (
-        <MenuContainer>
-            <section>
-                <h1>Register your account</h1>
+        <div className="body">
+            <section className="body-container container">
+                <h1 style={{textShadow: '1px 1px black'}}>
+                    Register your account
+                </h1>
                 <form>
                     <TextField
                         id="name"
@@ -76,35 +79,12 @@ const Cadastro = () => {
                         margin="normal"
                     />
                     <br></br>
-                    {/* <TextField
-                        id="school"
-                        select
-                        label="Choose your school"
-                        className={classes.textField}
-                        value={values.school}
-                        onChange={handleChange('school')}
-                        SelectProps={{
-                            native: true,
-                            MenuProps: {
-                                className: classes.menu,
-                            },
-                        }}
-                        helperText="Please select your school"
-                        margin="normal"
-                    >
-                        {schools.map(option => (
-                            <MenuItem key={option.value} value={option.value}>
-                                {option.label}
-                            </MenuItem>
-                        ))}}
-                </TextField>
-                <br></br> */}
                     <Link to="/thankyou">
                         <Button variant="contained" color="primary">Submit</Button>
                     </Link>
                 </form>
             </section>
-        </MenuContainer>
+        </div>
     )
 }
 

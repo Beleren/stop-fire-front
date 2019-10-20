@@ -4,6 +4,7 @@ import Home from "./scenes/Home";
 import Cadastro from './scenes/Cadastro';
 import EndScreen from './scenes/EndScreen';
 import Map from "./components/Map";
+import PreGame from "./scenes/PreGame";
 import Disclaimer from "./scenes/Disclaimer";
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path='/game'>
             <Map />
+          </Route>
+          <Route path='/pregame'>
+            <PreGame />
           </Route>
           <Route path='/form'>
             <Cadastro />

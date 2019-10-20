@@ -8,8 +8,14 @@ const Home = () => {
     <div className='home'>
       <section className="home-container container">
         <h1 style={{ marginBottom: "2em" }}>STOP FIRE</h1>
+        <h4 style={{color:'white'}}>
+          BY PLAYING THIS GAME YOU CAN HELP TO SAVE FORESTS<br></br>
+          PLAY UNTIL THE END TO HELP THE WORLD
+        </h4>
         <div>
-          <Link to='/disclaimer' className='btn'>START</Link>
+          <Link to='/pregame'>
+            <Button variant="contained" color="primary">Continue</Button>
+          </Link>
         </div>
       </section>
     </div>

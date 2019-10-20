@@ -1,16 +1,21 @@
-.home {
-  background: url("/images/Slide1.PNG") 50% 50% no-repeat;
+.body {
+  background: url("/images/Slide3.PNG") 50% 50% no-repeat;
   background-size: cover;
-  text-shadow: 1px 1px black;
 }
 
 h1 {
   margin-right: 0 !important;
 }
 
-.home-container {
+.body-container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-flow: column;
+}
+
+form {
+  background-color: white;
+  padding: 1em;
+  border-radius: 1em;
 }

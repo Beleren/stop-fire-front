@@ -1,6 +1,5 @@
-.home {
-  background: url("/images/Slide1.PNG") 50% 50% no-repeat;
-  background-size: cover;
+.endscreen {
+  background: #ccc;
   text-shadow: 1px 1px black;
 }
 
@@ -8,9 +7,15 @@ h1 {
   margin-right: 0 !important;
 }
 
-.home-container {
+.endscreen-container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-flow: column;
+}
+
+form {
+  background-color: white;
+  padding: 1em;
+  border-radius: 1em;
 }
