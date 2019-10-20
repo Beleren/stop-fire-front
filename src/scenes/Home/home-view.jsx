@@ -1,21 +1,17 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-
-const styles = {
-  height: window.innerHeight,
-  width: "100%",
-  position: "absolute",
-  zIndex: "5",
-  backgroundColor: "white",
-  opacity: "0.8"
-}
+import MenuContainer from "../../components/MenuContainer";
 
 const Home = () => {
   return (
-    <section style={styles}>
-      <h1>Nome do jogo</h1>
-      <Button variant="contained">oi</Button>
-    </section>
+    <MenuContainer>
+      <section style={{ textAlign: "center" }}>
+        <h1 style={{ marginBottom: "2em" }}>Stop Fire</h1>
+        <div>
+          <Button variant="contained" href="/game">START</Button>
+        </div>
+      </section>
+    </MenuContainer>
   );
 };
 
