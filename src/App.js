@@ -1,10 +1,16 @@
-import React from 'react';
-import './App.css';
-import Map from './components/Map';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./scenes/Home";
 
 function App() {
   return (
-    <Map />
+    <Router>
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
