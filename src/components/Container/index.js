@@ -1,13 +1,17 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
+import { withStyles } from "@material-ui/core/styles";
 
+const customStyles = {
+  height: window.innerHeight
+};
 const CustomContainer = props => {
-  const { styles, children, maxWidth } = props;
-  const customStyles = {
-    ...styles,
-    height: window.innerHeight
-  };
-  return <Container maxWidth={maxWidth} style={customStyles}>{ children }</Container>;
+  const { children, maxWidth } = props;
+  return (
+    <Container maxWidth={maxWidth}>
+      {children}
+    </Container>
+  );
 };
 
-export default CustomContainer;
+export default withStyles(customStyles)(CustomContainer);
